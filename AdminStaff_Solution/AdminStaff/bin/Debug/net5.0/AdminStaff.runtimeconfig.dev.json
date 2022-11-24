@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\messj\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\messj\\.nuget\\packages"
+    ]
+  }
+}
