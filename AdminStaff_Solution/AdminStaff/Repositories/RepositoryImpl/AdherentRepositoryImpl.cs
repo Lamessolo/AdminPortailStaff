@@ -1,4 +1,5 @@
 ﻿using AdminStaff.DataModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace AdminStaff.Repositories.RepositoryImpl
             this.context = context;
         }
 
-        public List<Adherent> GetAdherents()
+        public async Task<List<Adherent>> GetAdherentsAsync()
         {
-            return context.Adherents.ToList();
+            return await context.Adherents.Include(nameof(Gender)).Include(nameof(Adresse)).ToListAsync();
         }
     }
 }

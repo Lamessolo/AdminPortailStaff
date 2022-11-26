@@ -1,6 +1,7 @@
 using AdminStaff.DataModels;
 using AdminStaff.Repositories;
 using AdminStaff.Repositories.RepositoryImpl;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,6 +37,7 @@ namespace AdminStaff
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AdminStaff", Version = "v1" });
             });
+            services.AddAutoMapper(typeof(Startup).Assembly);
             services.AddDbContext<AdminStaffContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 

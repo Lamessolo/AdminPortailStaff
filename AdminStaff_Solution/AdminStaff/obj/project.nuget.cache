@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4B14vCXipo8f46QLJghhz1X4D7xg6SgNoxhK4UiCrlo8n8k+vrmOSGS8msgDiMGIV1a0ri4rLwZX1PT3OMdN3A==",
+  "dgSpecHash": "2CYdYjrjYpTpKbDnCeRgdvkAALgV7hU1rcKpuHfQ3eXZH4tLh8RkITqgqKpq1FCuAnSkqFOeDxv5dypwOoD+Zw==",
   "success": true,
   "projectFilePath": "C:\\Users\\messj\\source\\repos\\AdminPortal\\AdminPortailStaff\\AdminStaff_Solution\\AdminStaff\\AdminStaff.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\messj\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
+    "C:\\Users\\messj\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
@@ -72,7 +74,7 @@
     "C:\\Users\\messj\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\messj\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\messj\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

@@ -1,4 +1,6 @@
-﻿using AdminStaff.Repositories;
+﻿using AdminStaff.DomainModels;
+using AdminStaff.Repositories;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,17 +13,19 @@ namespace AdminStaff.Controllers
     public class AdherentsController : Controller
     {
         private readonly IAdherentRepository adherentRepository;
-
-        public AdherentsController(IAdherentRepository adherentRepository)
+        private readonly IMapper mapper;
+        public AdherentsController(IAdherentRepository adherentRepository,IMapper mapper)
         {
             this.adherentRepository = adherentRepository;
+            this.mapper = mapper;
         }
 
         [HttpGet]
         [Route("[controller]")]
-        public IActionResult GetAllAdherents()
+        public async Task<IActionResult> GetAllAdherents()
         {
-            return  Ok(adherentRepository.GetAdherents());
+            var adherents = await adherentRepository.GetAdherentsAsync();
+            return Ok(mapper.Map<List<Adherent>>(adherents));
         }
     }
 }

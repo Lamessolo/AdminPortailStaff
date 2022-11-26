@@ -56,3 +56,5 @@ C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\Ad
 C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\AdminStaff\obj\Debug\net5.0\ref\AdminStaff.dll
 C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\AdminStaff\obj\Debug\net5.0\AdminStaff.pdb
 C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\AdminStaff\obj\Debug\net5.0\AdminStaff.genruntimeconfig.cache
+C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\AdminStaff\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\messj\source\repos\AdminPortal\AdminPortailStaff\AdminStaff_Solution\AdminStaff\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

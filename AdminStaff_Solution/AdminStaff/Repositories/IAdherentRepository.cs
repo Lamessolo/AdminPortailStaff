@@ -8,7 +8,7 @@ namespace AdminStaff.Repositories
 {
  public   interface IAdherentRepository
     {
-        List<Adherent> GetAdherents();
+         Task <List<Adherent>> GetAdherentsAsync();
 
 
     }
