@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 namespace AdminStaff.Controllers
 {
     [ApiController]
-    public class AdherentsController : Controller
+    public class AdherentController : Controller
     {
         private readonly IAdherentRepository adherentRepository;
         private readonly IMapper mapper;
-        public AdherentsController(IAdherentRepository adherentRepository,IMapper mapper)
+        public AdherentController(IAdherentRepository adherentRepository,IMapper mapper)
         {
             this.adherentRepository = adherentRepository;
             this.mapper = mapper;
