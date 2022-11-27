@@ -21,11 +21,23 @@ namespace AdminStaff.Controllers
         }
 
         [HttpGet]
-        [Route("[controller]")]
+        [Route("api/[controller]")]
         public async Task<IActionResult> GetAllAdherents()
         {
             var adherents = await adherentRepository.GetAdherentsAsync();
             return Ok(mapper.Map<List<Adherent>>(adherents));
+        }
+
+        [HttpGet]
+        [Route("api/[controller]/{adherentId:guid}")]
+        public async Task<IActionResult> GetAdherentByIdAsync([FromRoute] Guid adherentId)
+        {
+            var adherent = await adherentRepository.GetAdherentByIdAsync(adherentId);
+            if(adherent == null)
+            {
+                return NotFound();
+            }
+            return Ok(mapper.Map<Adherent>(adherent));
         }
     }
 }

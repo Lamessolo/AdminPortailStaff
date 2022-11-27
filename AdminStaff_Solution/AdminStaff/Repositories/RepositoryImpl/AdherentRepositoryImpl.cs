@@ -16,9 +16,17 @@ namespace AdminStaff.Repositories.RepositoryImpl
             this.context = context;
         }
 
+      
+
         public async Task<List<Adherent>> GetAdherentsAsync()
         {
             return await context.Adherents.Include(nameof(Gender)).Include(nameof(Adresse)).ToListAsync();
+        }
+
+        public async Task<Adherent> GetAdherentByIdAsync(Guid adherentId)
+        {
+            return await context.Adherents.Include(nameof(Gender)).Include(nameof(Adresse))
+                .FirstOrDefaultAsync(x=> x.Id == adherentId);
         }
     }
 }
