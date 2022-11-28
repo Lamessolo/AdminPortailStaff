@@ -28,5 +28,36 @@ namespace AdminStaff.Repositories.RepositoryImpl
             return await context.Adherents.Include(nameof(Gender)).Include(nameof(Adresse))
                 .FirstOrDefaultAsync(x=> x.Id == adherentId);
         }
+
+        public async Task<List<Gender>> GetGendersAsync()
+        {
+            return await context.Genders.ToListAsync();
+        }
+
+        public async Task<bool> Exists(Guid adherentId)
+        {
+            return await context.Adherents.AnyAsync(x => x.Id == adherentId);
+        }
+
+        public async Task<Adherent> UpdateAdherent(Guid adherentId, Adherent adherentUpdated)
+        {
+            var adherentExisting = await GetAdherentByIdAsync(adherentId);
+            if(adherentExisting != null)
+            {
+                adherentExisting.FirstName = adherentUpdated.FirstName;
+                adherentExisting.LastName = adherentUpdated.LastName;
+                adherentExisting.DateOfBirth = adherentUpdated.DateOfBirth;
+                adherentExisting.Email = adherentUpdated.Email;
+                adherentExisting.GenderId = adherentUpdated.GenderId;
+                adherentExisting.Mobile = adherentUpdated.Mobile;
+                adherentExisting.Adresse.PhysicalAdresse= adherentUpdated.Adresse.PhysicalAdresse;
+                adherentExisting.Adresse.PostalAdresse = adherentUpdated.Adresse.PostalAdresse;
+
+                await context.SaveChangesAsync();
+                return adherentExisting;
+            }
+
+            return null;
+        }
     }
 }

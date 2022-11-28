@@ -12,7 +12,6 @@ namespace AdminStaff.DataModels
         }
 
         public DbSet<Adherent> Adherents { get; set; }
-
         public DbSet<Adresse> Adresses { get; set; }
         public DbSet<Gender> Genders { get; set; }
 

@@ -10,7 +10,12 @@ namespace AdminStaff.Repositories
     {
          Task <List<Adherent>> GetAdherentsAsync();
          Task<Adherent> GetAdherentByIdAsync(Guid adherentId);
-        
+
+        Task<List<Gender>> GetGendersAsync();
+
+        Task<bool> Exists(Guid adherentId);
+
+        Task<Adherent> UpdateAdherent(Guid adherentId, Adherent adherentUpdated);
 
     }
 }

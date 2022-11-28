@@ -39,5 +39,22 @@ namespace AdminStaff.Controllers
             }
             return Ok(mapper.Map<Adherent>(adherent));
         }
+
+        [HttpPut]
+        [Route("api/[controller]/{adherentId:guid}")]
+        public async Task<IActionResult> UpdateAdherentByIdAsync([FromRoute] Guid adherentId,[FromBody] UpdateAdherent adherentUpdated)
+        {
+            if(await adherentRepository.Exists(adherentId))
+            {
+              var updatedAdherent = await  adherentRepository.UpdateAdherent(adherentId,mapper.Map<DataModels.Adherent>(adherentUpdated));
+                if(updatedAdherent != null)
+                {
+                    return Ok(mapper.Map<Adherent>(updatedAdherent));
+                }
+            }
+            
+                return NotFound();
+            
+        }
     }
 }
