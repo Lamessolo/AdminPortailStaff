@@ -16,8 +16,6 @@ namespace AdminStaff.Repositories.RepositoryImpl
             this.context = context;
         }
 
-      
-
         public async Task<List<Adherent>> GetAdherentsAsync()
         {
             return await context.Adherents.Include(nameof(Gender)).Include(nameof(Adresse)).ToListAsync();
@@ -58,6 +56,13 @@ namespace AdminStaff.Repositories.RepositoryImpl
             }
 
             return null;
+        }
+
+        public async  Task<Adherent> AddAdherent(Adherent adherentAdd)
+        {
+            var adherent = await context.Adherents.AddAsync(adherentAdd);
+            await context.SaveChangesAsync();
+            return adherent.Entity;
         }
     }
 }

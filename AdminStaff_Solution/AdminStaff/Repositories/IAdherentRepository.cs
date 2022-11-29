@@ -17,5 +17,7 @@ namespace AdminStaff.Repositories
 
         Task<Adherent> UpdateAdherent(Guid adherentId, Adherent adherentUpdated);
 
+        Task<Adherent> AddAdherent( Adherent adherentAdd);
+
     }
 }

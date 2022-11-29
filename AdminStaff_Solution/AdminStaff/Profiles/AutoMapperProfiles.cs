@@ -17,7 +17,7 @@ namespace AdminStaff.Profiles
             CreateMap<DataModels.Gender, Gender>().ReverseMap();
             CreateMap<UpdateAdherent, DataModels.Adherent>()
                 .AfterMap<UpdateAdherentAfterMaps>();
-               
+            CreateMap<AddAdherent, DataModels.Adherent>().AfterMap<AddAdherentAfterMaps>();
         }
        
     }

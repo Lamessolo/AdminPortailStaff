@@ -29,7 +29,7 @@ namespace AdminStaff.Controllers
         }
 
         [HttpGet]
-        [Route("api/[controller]/{adherentId:guid}")]
+        [Route("api/[controller]/{adherentId:guid}"), ActionName("GetAdherentByIdAsync")]
         public async Task<IActionResult> GetAdherentByIdAsync([FromRoute] Guid adherentId)
         {
             var adherent = await adherentRepository.GetAdherentByIdAsync(adherentId);
@@ -55,6 +55,15 @@ namespace AdminStaff.Controllers
             
                 return NotFound();
             
+        }
+
+        [HttpPost]
+        [Route("api/[controller]/add")]
+        public async Task<IActionResult> AddAdherentAsync([FromBody] AddAdherent adherentAdd)
+        {
+          var adherent =  await adherentRepository.AddAdherent(mapper.Map<DataModels.Adherent>(adherentAdd));
+            return CreatedAtAction(nameof(GetAdherentByIdAsync), new { adherentId = adherent.Id },
+                mapper.Map<Adherent>(adherent));
         }
     }
 }
