@@ -19,5 +19,7 @@ namespace AdminStaff.Repositories
 
         Task<Adherent> AddAdherent( Adherent adherentAdd);
 
+        Task<bool> UpdateProfileImage(Guid adherentId , string profileImageUrl);
+
     }
 }

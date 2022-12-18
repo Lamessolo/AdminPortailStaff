@@ -13,6 +13,7 @@ namespace AdminStaff.DomainModels
         public DateTime DateOfBirth { get; set; }
         public string Email { get; set; }
         public long Mobile { get; set; }
+        public string ProfileImage { get; set; }
         public Guid GenderId { get; set; }
         public string PhysicalAdresse { get; set; }
         public string PostalAdresse { get; set; }

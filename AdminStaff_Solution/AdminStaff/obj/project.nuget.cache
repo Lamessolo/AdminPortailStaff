@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2CYdYjrjYpTpKbDnCeRgdvkAALgV7hU1rcKpuHfQ3eXZH4tLh8RkITqgqKpq1FCuAnSkqFOeDxv5dypwOoD+Zw==",
+  "dgSpecHash": "TyZkMRd3/U23so/AMwPYozQqO1sz5rEzOdyG/EtS04F0YEAN3mcYs+Qv5csDkPxKsNcbSPkRB0w54XKbV8MTMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\messj\\source\\repos\\AdminPortal\\AdminPortailStaff\\AdminStaff_Solution\\AdminStaff\\AdminStaff.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\messj\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\messj\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
+    "C:\\Users\\messj\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.3\\fluentvalidation.aspnetcore.10.3.3.nupkg.sha512",
+    "C:\\Users\\messj\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.3\\fluentvalidation.dependencyinjectionextensions.10.3.3.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\messj\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

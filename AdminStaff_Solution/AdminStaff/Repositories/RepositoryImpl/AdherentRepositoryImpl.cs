@@ -64,5 +64,18 @@ namespace AdminStaff.Repositories.RepositoryImpl
             await context.SaveChangesAsync();
             return adherent.Entity;
         }
+
+        public async Task<bool> UpdateProfileImage(Guid adherentId, string profileImageUrl)
+        {
+            var adherent = await GetAdherentByIdAsync(adherentId);
+            if(adherent != null)
+            {
+                adherent.ProfileImage = profileImageUrl;
+               await context.SaveChangesAsync();
+                return true;
+            }
+           
+            return false;
+        }
     }
 }
